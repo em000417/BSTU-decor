@@ -1,0 +1,264 @@
+@media (max-width: 320px) {
+
+    .top-section {
+        padding-bottom: 18px;
+        justify-content: space-around;
+        
+    }
+
+
+    .top-height {
+        margin: 0;
+    }
+
+    .main-picture {
+        display: none;
+    }
+    .mob {
+      display: block;
+    }
+
+    .offers-title{
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+    .items {
+      background-color: #bad8b6;
+      display: flex;
+      flex-wrap: wrap; 
+  }
+  
+  .item {
+      text-align: center;
+      padding-top: 10px;
+      margin-bottom: 50px;
+      width: calc(100% - 20px); 
+  }
+
+  .button {
+    font-size: 15px;
+    padding: 5px 5px;
+  }
+
+  .price-block {
+    flex-wrap: wrap; 
+}
+
+.price-element {
+    width: 100%; 
+}
+
+.video-tittle {
+  font-size: 25px;
+}
+.vtitle{
+  font-size: 20px;
+  padding: 20px;
+}
+
+.description-contact-us {
+  font-size: 20px;
+}
+
+.contact-img {
+  display: none;
+}
+
+.inputs {
+  background: #bad8b6;
+}
+
+.phone-button {
+  font-size: 10px;
+}
+
+.footer {
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.right-side {
+  text-align: center;
+}
+
+.tel {
+  display: none;
+}
+
+a{
+  display: initial;
+}
+
+    .unusual-images-lg {
+        display: none;
+    }
+
+    .unusual-images-md {
+        display: none;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .arrow-md{
+        display: none;
+    }
+
+    .unusual-images-sm {
+        width: calc(100%);
+        position: relative;
+        display: inline-block;
+    }
+
+    .unusual-candles {
+      width: calc(100%);
+    }
+
+    .prev-arrow,
+.next-arrow {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px; /* Размер стрелок */
+    color: white; /* Цвет стрелок */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.prev-arrow::before {
+    content: '←'; /* Символ стрелки влево */
+    margin-right: 5px; /* Отступ между стрелкой и текстом (опционально) */
+}
+
+.next-arrow::before {
+    content: '→'; /* Символ стрелки вправо */
+    margin-left: 5px; /* Отступ между стрелкой и текстом (опционально) */
+}
+
+.prev-arrow {
+    left: 10px;
+}
+
+.next-arrow {
+    right: 10px;
+}
+
+    .arrow-sm{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-us-tittle {
+        font-size: 20px;
+    }
+
+    .input {
+        font-size: 18px;
+    }
+
+    .phone-button {
+        width: 50%;
+    }
+
+    .footer{
+        flex-direction: column;
+    }
+
+    .wrapper {
+        max-width: 1024px;
+        background-color: #9CAD84;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+     
+      .sweetHome-assets {
+        position: fixed;
+        height: 4%;
+        top: 0;
+        left: 0;
+        margin: 15px;
+        margin-left: 40px; 
+    }
+      
+      .menu {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 100%;
+        height: 100%;
+        background-color: #ebeaea; 
+        z-index: 1001; 
+        transition: right 0.3s ease; 
+        margin-top: 35px;
+      }
+      
+    
+      .menu.active {
+        right: 0; 
+        margin-top: 35px;
+      }
+    
+      .menu__box {
+        display: flex;
+        flex-direction: column; 
+        align-items: left; 
+        padding: 15px; 
+        margin: 10px; 
+      }
+    
+      .menu__item {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        font-size: 25px;
+        color: #427A5B;
+        display: relative;
+    }
+    
+      .menu__box li:not(:last-child)::after {
+        display: none;
+      }
+    
+      .menu-toggle {
+        display: none; 
+      }
+    .menu-btn img {
+      display: block;
+    }
+      .menu-btn {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 30px;
+        height: 20px;
+    }
+    
+    .menu-btn  {
+        display: block;
+        height: 3px;
+        margin-bottom: 5px;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-btn.active img {
+
+      transform: translateY(-6px) rotate(-90deg);
+  }
+}

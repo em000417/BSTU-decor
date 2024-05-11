@@ -1,0 +1,52 @@
+@media (max-width: 768px) {
+    .sweetHome-assets {
+        margin-right: 10px;
+    }
+
+    .menu__item {
+        font-size: 18px;
+    }
+
+    .phone-button {
+        font-size: 10px;
+    }
+  
+    .unusual-images-lg {
+        display: none;
+    }
+  
+    .unusual-images-md {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+    }
+  
+    .arrow {
+        display: none;
+    }
+  
+    .arrow-md{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+  
+    
+  
+    .contact-us {
+        padding-bottom: 46px;
+    }
+  
+    .arrow-sm{
+        display: none;
+    }
+  
+    .unusual-images-sm {
+        display: none;
+    }
+
+    .footer{
+        font-size: 20px;
+    }
+  }
