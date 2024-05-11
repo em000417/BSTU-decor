@@ -2,10 +2,246 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sweet Home</title>
 </head>
-<body>
-<h1>Семёнова Екатерина Дмитриевна</h1>    
+    <header class="container top-section">
+        <div class="header-menu top-height">
+        
+                <div class="wrapper">
+                    
+                      <div class="container1">
+                        
+                        <nav class="menu">
+                          
+                            <input class="menu-toggle" id="menu-toggle" type="checkbox">
+                            <label class="menu-btn" for="menu-toggle">
+                                <img src="./assets/png/Vector.png" alt="Меню">
+                            </label>
+                  
+                          <ul class="menu__box">
+                            <img class="sweetHome-assets" src="./assets/png/logo.png" alt="SWEETHOME">
+                            <li><a class="menu__item" href="#PlaceAnOrder">Оформить заказ</a></li>
+                            <li><a class="menu__item" href="#newProducts">Новинки</a></li>
+                            <li><a class="menu__item" href="#PRICE">Цены</a></li>
+                            <li><a class="menu__item" href="#contact-us">Контакты</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                      <hr class="lol"/>
+                </div>
+        </div>
+    </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const menuToggle = document.getElementById("menu-toggle");
+          const menuBtn = document.querySelector(".menu-btn");
+      
+          menuBtn.addEventListener("click", function () {
+            menuToggle.checked = !menuToggle.checked;
+            menuBtn.classList.toggle("active");
+            document.querySelector(".menu").classList.toggle("active");
+          });
+        });
+      </script>
+
+    <div class="main-page container">
+        <img class="main-picture" src="./assets/png/main.png" alt="Main">
+        <img class="main-picture mob" src="./assets/png/main-mob.png" alt="Main-mob">
+    </div>
+
+    <div class="offers container">
+        <p class="offers-title" id="offers">У нас вы можете найти:</p>
+        <div class="items">
+            <div class="item">
+                <img src="./assets/png/candels.png" alt="personal-selection">
+                <h4 class="item-text">Свечи и подсвечники</h4>
+            </div>
+            <div class="item">
+                <img src="./assets/png/paintings.png" alt="special-collections">
+                <h4 class="item-text">Картины</h4>
+            </div>
+            <div class="item">
+                <img src="./assets/png/mirrors.png" alt="gift-packages">
+                <h4 class="item-text">Зеркала</h4>
+            </div>
+            <div class="item">
+                <img src="./assets/png/clocks.png" alt="clock">
+                <h4 class="item-text">Часы</h4>
+            </div>
+            <div class="item">
+                <img src="./assets/png/vases.png" alt="aromaterapy">
+                <h4 class="item-text">Вазы и кашпо</h4>
+            </div>
+            <div class="item">
+                <img src="./assets/png/frames.png" alt="aromaterapy">
+                <h4 class="item-text">Фоторамки</h4>
+            </div>
+        </div>
+
+        <div class="block container">
+            <hr />
+            <h3 class="video-tittle products-title" id="newProducts">НОВИНКИ</h3>
+            <div class="button-product">
+                <button class="button active" onclick="toggleActive(this)">Вазы и кашпо</button>
+                <button class="button" onclick="toggleActive(this)">Фоторамки</button>
+                <script>
+                    function toggleActive(button) {
+                      const buttons = document.querySelectorAll('.button');
+                      buttons.forEach(btn => {
+                        if (btn !== button) {
+                          btn.classList.remove('active');
+                        }
+                      });
+                      button.classList.add('active');
+                    }
+                  </script>
+            </div>
+            <div class="unusual-images-lg">
+                <img class="unusual-candles" src="./assets/png/picture1.png" alt="head-candles">
+                <img class="unusual-candles" src="./assets/png/picture2.png" alt="inline-candles">
+                <img class="unusual-candles" src="./assets/png/picture3.png" alt="round-candles">
+                <img class="unusual-candles" src="./assets/png/picture4.png" alt="different-candles">
+                <img class="unusual-candles" src="./assets/png/picture5.png" alt="line-candles">
+                <img class="unusual-candles" src="./assets/png/picture6.png" alt="white-candles">
+            </div>
+            <div class="unusual-images-md">
+                <img class="unusual-candles" src="./assets/png/picture1.png" alt="head-candles">
+                <img class="unusual-candles" src="./assets/png/picture2.png" alt="inline-candles">
+            </div>
+            <div class="unusual-images-md">
+                <img class="unusual-candles" src="./assets/png/picture4.png" alt="different-candles">
+                <img class="unusual-candles" src="./assets/png/picture3.png" alt="round-candles">
+            </div>
+            <div class="unusual-images-sm">
+                <img class="unusual-candles current-image" src="./assets/png/picture1.png" alt="head-candles">
+                <span class="prev-arrow"></span>
+                <span class="next-arrow"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Получаем ссылки на изображение и стрелки
+          const currentImage = document.querySelector('.current-image');
+          const prevArrow = document.querySelector('.prev-arrow');
+          const nextArrow = document.querySelector('.next-arrow');
+      
+          // Список изображений для переключения
+          const images = [
+            "./assets/png/picture1.png",
+            "./assets/png/picture2.png",
+            "./assets/png/picture3.png",
+            "./assets/png/picture4.png",
+            "./assets/png/picture5.png",
+            "./assets/png/picture6.png"
+          ];
+      
+          let currentIndex = 0; // Индекс текущего изображения
+      
+          // Функция для переключения на предыдущее изображение
+          function showPrevImage() {
+              currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+              currentImage.src = images[currentIndex];
+          }
+      
+          // Функция для переключения на следующее изображение
+          function showNextImage() {
+              currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+              currentImage.src = images[currentIndex];
+          }
+      
+          // Обработчики событий для стрелок
+          prevArrow.addEventListener('click', showPrevImage);
+          nextArrow.addEventListener('click', showNextImage);
+        });
+    </script>
+
+    <div class="block container">
+        <hr />
+        <h3 class="video-tittle products-title" id="PRICE">Цены</h3>
+        <div class="price-block">
+            <div class="price-element">
+                <img class="price-img" src="./assets/png/picture1.png" alt="candles">
+                <p class="price-tittle">Ваза декоративная Волна</p>
+                <button class="price-button ">
+                    <span class="price-text">54 BYN</span>
+                </button>
+            </div>
+            <div class="price-element">
+                <img class="price-img" src="./assets/png/picture1.png" alt="eco-friendly">
+                <p class="price-tittle">Набор картин на стену ЧБ</p>
+                <button class="price-button ">
+                    <span class="price-text">101 BYN</span> 
+                </button>
+            </div>
+            <div class="price-element">
+                <img class="price-img" src="./assets/png/picture3.png" alt="unusual">
+                <p class="price-tittle">Кашпо из гипса Лицо</p>
+                <button class="price-button ">
+                    <span class="price-text">72 BYN</span> 
+                </button>
+            </div>
+        </div>
+    </div>
+
+        <div class="block container">
+            <hr />
+            <h3 class="video-tittle" id="video">Как сделать дом уютным?</h3>
+            <h1 class="vtitle" id="vtitle">Этим вопросом задается любая семья после покупки жилья</h1>
+            <video src="./assets/video.mp4" controls>
+                Ваш браузер не поддерживает тег <code>video</code>.
+            </video>
+        </div>
+
+    
+
+    
+
+    <div class="contact container">
+        <hr />
+        <h3 class="video-tittle" id="contact-us">Обратная связь</h3>
+        <h1 class="description-contact-us" id="description-contact">Если вы хотите оставить отзыв или задать вопрос о продукции</h1>
+        <div class="image-and-inputs">
+        <img class="contact-img" src="./assets/jpg/back_contact.jpg" alt="unusual">
+        <div class="inputs">
+        <input name="email" class="input" type="email" placeholder="E-mail">
+        <input name="phone" class="input" type="tel" placeholder="Телефон">
+        <textarea name="Message" placeholder="Ваше сообщение" class="input" rows="4" cols="10"></textarea>
+        <button type="submit" class="phone-button">Отправить</button>
+        </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="left-side">
+            <div class="footer-messenger tel">
+                <p>+375 22 345 67 87</p>
+            </div>
+            <a href="https://www.figma.com/file/I7xz9Szup5hggrh9USelaE/%D0%BB%D0%B0%D0%B1%D0%B0-1?type=design&node-id=1%3A3&mode=design&t=zqKZTWgG48SZ1KwK-1">
+                <p>Figma</p>
+            </a>
+            <a href="https://github.com/em000417">
+                <p>GitHub</p>
+            </a>
+        </div>
+        <div class="center">
+        <img class="sweetHome-footer" src="./assets/png/logo.png" alt="SWEETHOME">
+        <div class="footer-messenger">
+            <p class="footer-text">info@sweethome.by</p>
+        </div>
+        <div class="footer-text">
+            <p>Семенова Екатерина, ЭМ-4</p>
+        </div>
+        </div>
+        
+        <div class="right-side">
+            <div class="icons">
+                <p class="footer-messenger text">Instagram</p>                 
+                <p class="footer-messenger text">YouTube</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
