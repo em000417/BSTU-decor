@@ -6,6 +6,32 @@
     text-align: center;
 }
 
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.centered-content {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.sweetHome-main {
+    width: 700px;
+    height: auto;
+} 
+
+.centered-content p {
+    font-family: Garamond;
+    margin-top: 10px;
+    color: #427A5B;
+    font-size: 29px;
+    font-weight: 500;
+}
+
 .tittle {
     font-size: 120px;
     color: #401609;
