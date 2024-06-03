@@ -39,16 +39,25 @@
     </div>
 </header>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const menuToggle = document.getElementById("menu-toggle");
-          const menuBtn = document.querySelector(".menu-btn");
-      
-          menuBtn.addEventListener("click", function () {
-            menuToggle.checked = !menuToggle.checked;
-            menuBtn.classList.toggle("active");
-            document.querySelector(".menu").classList.toggle("active");
-          });
-        });
+        document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuBtn = document.querySelector(".menu-btn");
+  const menuItems = document.querySelectorAll(".menu__item");
+
+  menuBtn.addEventListener("click", function() {
+    menuToggle.checked = !menuToggle.checked;
+    menuBtn.classList.toggle("active");
+    document.querySelector(".menu").classList.toggle("active");
+  });
+
+  menuItems.forEach(function(item) {
+    item.addEventListener("click", function() {
+      menuToggle.checked = false;
+      menuBtn.classList.remove("active");
+      document.querySelector(".menu").classList.remove("active");
+    });
+  });
+});
       </script>
 
 <div class="main-page container">
