@@ -1,0 +1,45 @@
+.item-tittle {
+    font-size: 16px;
+    color: #401609;
+    font-weight: bold;
+    padding-top: 16px;
+    padding-bottom: 3px;
+}
+
+.item-text {
+    color:#ffffff;
+    text-align:center;
+    vertical-align: middle;
+    font-size:33px;
+    font-weight: bold;
+    letter-spacing:4px;
+    border-style:hidden;
+    outline:none;
+}
+
+.items {
+    background-color: #bad8b6;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    text-align: center;
+    padding-top: 10px;
+    width: calc(33.33% - 20px); 
+    margin-bottom: 50px; 
+}
+
+.placeholder{
+    color:#427a5b;
+    text-align:center;
+    vertical-align:text-middle;
+    font-size:20px;
+    font-family:Garamond;
+    letter-spacing:4px;
+    line-height:118.75px;
+    border-style:hidden;
+    outline:none;
+    width:80px;
+}

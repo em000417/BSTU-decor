@@ -1,0 +1,68 @@
+.sweetHome-assets {
+    height: auto;
+    margin-right: 30px;
+}
+
+.header-menu{
+    display: flex;
+}
+
+.top-height {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__item {
+    color:#ffffff;
+    filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+    text-align:center;
+    vertical-align: middle;
+    font-size:26px;
+    font-family:Garamond;
+    font-weight: bold;
+    letter-spacing:2px;
+    border-style:hidden;
+    outline:none;
+}
+
+.menu {
+    margin: 0;
+    margin-bottom: 5px;
+    
+}
+.menu__box li:not(:first-child):not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 0.5px;
+    height: 28%;
+    background-color: white; 
+    margin-left: 5px; 
+}
+
+hr{
+    margin-top: 10px;   
+    border: none;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0;
+    margin-left: 40px;
+    filter:drop-shadow(0px 3.9960219860076904px 3.9960219860076904px rgba(0,0,0,0.25));
+}
+
+hr:not(.lol){
+    margin-right: 40px;
+}
