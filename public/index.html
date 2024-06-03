@@ -34,21 +34,30 @@
                       </ul>
                     </nav>
                   </div>
-                  <hr class="lol"/>
+                  <hr class="lol">
             </div>
     </div>
 </header>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const menuToggle = document.getElementById("menu-toggle");
-          const menuBtn = document.querySelector(".menu-btn");
-      
-          menuBtn.addEventListener("click", function () {
-            menuToggle.checked = !menuToggle.checked;
-            menuBtn.classList.toggle("active");
-            document.querySelector(".menu").classList.toggle("active");
-          });
-        });
+        document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuBtn = document.querySelector(".menu-btn");
+  const menuItems = document.querySelectorAll(".menu__item");
+
+  menuBtn.addEventListener("click", function() {
+    menuToggle.checked = !menuToggle.checked;
+    menuBtn.classList.toggle("active");
+    document.querySelector(".menu").classList.toggle("active");
+  });
+
+  menuItems.forEach(function(item) {
+    item.addEventListener("click", function() {
+      menuToggle.checked = false;
+      menuBtn.classList.remove("active");
+      document.querySelector(".menu").classList.remove("active");
+    });
+  });
+});
       </script>
 
 <div class="main-page container">
@@ -92,22 +101,11 @@
         </div>
 
         <div class="block container">
-            <hr />
+            <hr>
             <h3 class="video-tittle products-title" id="newProducts">НОВИНКИ</h3>
             <div class="button-product">
                 <button class="button active" onclick="toggleActive(this)">Вазы и кашпо</button>
                 <button class="button" onclick="toggleActive(this)">Фоторамки</button>
-                <script>
-                    function toggleActive(button) {
-                      const buttons = document.querySelectorAll('.button');
-                      buttons.forEach(btn => {
-                        if (btn !== button) {
-                          btn.classList.remove('active');
-                        }
-                      });
-                      button.classList.add('active');
-                    }
-                  </script>
             </div>
             <div class="unusual-images-lg">
                 <img class="unusual-candles" src="./assets/png/picture1.png" alt="head-candles">
@@ -116,61 +114,39 @@
                 <img class="unusual-candles" src="./assets/png/picture4.png" alt="different-candles">
                 <img class="unusual-candles" src="./assets/png/picture5.png" alt="line-candles">
                 <img class="unusual-candles" src="./assets/png/picture6.png" alt="white-candles">
+                <!-- Добавленные изображения для категории "Фоторамки" -->
+                <img class="unusual-candles frames" src="./assets/png/picture7.png" alt="photo-candles">
+                <img class="unusual-candles frames" src="./assets/png/picture8.png" alt="photo-candles">
+                <img class="unusual-candles frames" src="./assets/png/picture9.png" alt="photo-candles">
+                <img class="unusual-candles frames" src="./assets/png/picture10.png" alt="photo-candles">
+                <img class="unusual-candles frames" src="./assets/png/picture11.png" alt="photo-candles">
+                <img class="unusual-candles frames" src="./assets/png/picture12.png" alt="photo-candles">
             </div>
             <div class="unusual-images-md">
                 <img class="unusual-candles" src="./assets/png/picture1.png" alt="head-candles">
                 <img class="unusual-candles" src="./assets/png/picture2.png" alt="inline-candles">
+
+                <img class="unusual-candles frames" src="./assets/png/picture7.png" alt="photo-candles">
+                <img class="unusual-candles frames" src="./assets/png/picture8.png" alt="photo-candles">
             </div>
             <div class="unusual-images-md">
                 <img class="unusual-candles" src="./assets/png/picture4.png" alt="different-candles">
                 <img class="unusual-candles" src="./assets/png/picture3.png" alt="round-candles">
+
+                <img class="unusual-candles frames" src="./assets/png/picture9.png" alt="photo-candles">
+                <img class="unusual-candles frames" src="./assets/png/picture10.png" alt="photo-candles">
             </div>
             <div class="unusual-images-sm">
                 <img class="unusual-candles current-image" src="./assets/png/picture1.png" alt="head-candles">
+                <img class="unusual-candles current-image frames" src="./assets/png/picture7.png" alt="head-candles">
                 <span class="prev-arrow"></span>
                 <span class="next-arrow"></span>
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          // Получаем ссылки на изображение и стрелки
-          const currentImage = document.querySelector('.current-image');
-          const prevArrow = document.querySelector('.prev-arrow');
-          const nextArrow = document.querySelector('.next-arrow');
-      
-          // Список изображений для переключения
-          const images = [
-            "./assets/png/picture1.png",
-            "./assets/png/picture2.png",
-            "./assets/png/picture3.png",
-            "./assets/png/picture4.png",
-            "./assets/png/picture5.png",
-            "./assets/png/picture6.png"
-          ];
-      
-          let currentIndex = 0; // Индекс текущего изображения
-      
-          // Функция для переключения на предыдущее изображение
-          function showPrevImage() {
-              currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-              currentImage.src = images[currentIndex];
-          }
-      
-          // Функция для переключения на следующее изображение
-          function showNextImage() {
-              currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-              currentImage.src = images[currentIndex];
-          }
-      
-          // Обработчики событий для стрелок
-          prevArrow.addEventListener('click', showPrevImage);
-          nextArrow.addEventListener('click', showNextImage);
-        });
-    </script>
 
     <div class="block container">
-        <hr />
+        <hr>
         <h3 class="video-tittle products-title" id="PRICE">Цены</h3>
         <div class="price-block">
             <div class="price-element">
@@ -198,7 +174,7 @@
     </div>
 
         <div class="block container">
-            <hr />
+            <hr>
             <h3 class="video-tittle" id="video">Как сделать дом уютным?</h3>
             <h1 class="vtitle" id="vtitle">Этим вопросом задается любая семья после покупки жилья</h1>
             <video src="./assets/video.mp4" controls>
@@ -206,12 +182,8 @@
             </video>
         </div>
 
-    
-
-    
-
     <div class="contact container">
-        <hr />
+        <hr>
         <h3 class="video-tittle" id="contact-us">Обратная связь</h3>
         <h1 class="description-contact-us" id="description-contact">Если вы хотите оставить отзыв или задать вопрос о продукции</h1>
         <div class="image-and-inputs">
@@ -239,6 +211,6 @@
             <h4><a href="#">Семёнова Екатерина, ЭМ-4</a></h4>
         </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

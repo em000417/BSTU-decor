@@ -3,7 +3,9 @@
     padding-bottom: 40px;
     text-align: center;
 }
-
+.frames {
+    display: none;
+}
 .unusual {
     color: #9CAD84 ;
     background-color: #401609;
@@ -15,6 +17,8 @@
     justify-content: space-between;
     gap: 30px;
 }
+
+
 
 .offers-title {
     color:#427a5b;
