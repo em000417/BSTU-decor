@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Centurygothic';
+    src: url('/fonts/centurygothic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .contact {
     margin-bottom: 40px;
 }
@@ -63,22 +70,94 @@
     align-items: center;
 }
 
-.footer {
-    background-color: #427A5B;
-    padding: 14px 20px; 
+footer {
+    position: relative;
+    width: 100%;
+    background-color: rgba(66, 122, 91, 0.96);
+    height: 194px;
+    color: white;
     display: flex;
-    gap: 15%;
+    flex-direction: column;
     align-items: center;
-    font-size: 30px;
-    color:#ffffff;
-    font-weight: bold;
+}
+footer .logo img {
+    width: 30%; 
+    height: auto; 
+}
+footer .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    height: auto;
+}
+footer .info {
+    width: 1024px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px;
+}
+footer .info h2 {
+    font-family: Centurygothic, serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin-left: 65px;
+    margin-right: 50px;
+}
+footer .info h3 {
+    font-family: Centurygothic, serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+footer .info .youtube {
+    margin-left: 5px; 
+    margin-right: 20px; 
+}
+footer .group {
+    position: relative;
+    margin-top: 20px;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+}
+footer .group .group-link {
+    position: absolute;
+    left: 10%;
+
+}
+footer .group .group-link span:not(:first-child) {
+    margin-left: 20px;
+}
+footer .group .container {
+    display: flex;
+    position: absolute;
+    left: 8%;
+}
+footer .group h4 {
+    font-family: Centurygothic, serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+footer .group .container h4:not(:first-child) {
+    margin-left: 20px;
+}
+footer a {
+    font-family: Centurygothic, serif;
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
 }
 
-.footer-messenger,
-.footer-text {
-    display: flex;
-    align-items: center;
-    text-align: center;
+footer .info h2,
+footer .info h3,
+footer .group h4,
+footer .group .container h4:not(:first-child) {
+    font-family: "Centurygothic" !important;
 }
 
 .arrow{

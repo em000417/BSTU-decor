@@ -17,6 +17,10 @@ a {
     color: rgb(255, 255, 255);
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .top-section {
     display: flex;
     justify-content: space-between;
@@ -40,11 +44,25 @@ a {
     margin-bottom: 5px;
     
 }
-.menu__box li:not(:last-child)::after {
+.menu__box li:not(:first-child):not(:last-child)::after {
     content: '';
     position: absolute;
     width: 0.5px;
     height: 28%;
     background-color: white; 
     margin-left: 5px; 
+}
+
+hr{
+    margin-top: 10px;   
+    border: none;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0;
+    margin-left: 40px;
+    filter:drop-shadow(0px 3.9960219860076904px 3.9960219860076904px rgba(0,0,0,0.25));
+}
+
+hr:not(.lol){
+    margin-right: 40px;
 }

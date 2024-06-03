@@ -1,10 +1,25 @@
 @media (max-width: 768px) {
     .sweetHome-assets {
+        height: 25px;
         margin-right: 10px;
     }
 
     .menu__item {
         font-size: 18px;
+    }
+
+    .menu__box li:not(:first-child):not(:last-child)::after {
+        width: 0.5px;
+        height: 25%;
+    }
+
+    .sweetHome-main {
+        width: 500px;
+        height: auto;
+    } 
+    
+    .centered-content p {
+        font-size: 20px;
     }
 
     .phone-button {
@@ -46,7 +61,29 @@
         display: none;
     }
 
-    .footer{
-        font-size: 20px;
+    footer  .info {
+        width: 768px;
     }
+    footer .info h2 {
+        font-size: 24px;
+        margin-left: 25px;
+        margin-right: 50px;
+    }
+    footer .info h3 {
+        font-size: 17px;
+    }
+    footer .group {
+        width: 768px;
+    }
+    footer .group .container {
+
+        left: 8%;
+    }
+    footer .group h4 {
+        font-size: 12px;
+    }
+    footer .group .container h4:not(:first-child) {
+        margin-left: 20px;
+    }
+
   }
