@@ -285,6 +285,10 @@ hr:not(.lol) {
   text-align: center;
 }
 
+.frames {
+  display: none;
+}
+
 .unusual {
   color: #9CAD84;
   background-color: #401609;
